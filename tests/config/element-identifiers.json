@@ -218,7 +218,7 @@
     "addToCartLabel": "Add to Cart",
     "closeMessageLabel": "Close message",
     "errorMessageLocator": "#messages div .messages div .error span",
-    "errorMessageStreetAddressRequiredFieldText": "Street Address field is required.",
+    "errorMessageStreetAddressRequiredFieldText": "This is a required field.",
     "genericPriceLabel": "Price",
     "genericPriceSymbol": "$",
     "genericSaveButtonLabel": "Save",
@@ -228,7 +228,7 @@
     "messageLocator": "#messages .messages div",
     "removeLabel": "Remove",
     "searchButtonLabel": "Search",
-    "successMessageLocator": "div.message.success"
+    "successMessageLocator": "[data-ui-id=\"message-success\"]"
   },
   "homePage": {
     "homePageTitleText": "Hyvä Theme"
