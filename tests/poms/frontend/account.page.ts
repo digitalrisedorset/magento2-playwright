@@ -59,8 +59,10 @@ class AccountPage {
     this.saveAddressButton = page.getByRole('button', { name: UIReference.newAddress.saveAdressButton });
 
     // Account Information elements
-    this.changePasswordSwitch = page.getByRole('switch', { name: UIReference.personalInformation.changePasswordSwitchLabel });
-    this.changeEmailCheck = page.getByRole('switch', { name: UIReference.personalInformation.changeEmailCheckLabel });
+    //this.changePasswordSwitch = page.getByRole('switch', { name: UIReference.personalInformation.changePasswordSwitchLabel });
+    this.changePasswordSwitch = page.getByRole('checkbox', {name: UIReference.personalInformation.changePasswordSwitchLabel});
+    //this.changeEmailCheck = page.getByRole('switch', { name: UIReference.personalInformation.changeEmailCheckLabel });
+    this.changeEmailCheck = page.getByRole('checkbox', {name: UIReference.personalInformation.changeEmailCheckLabel});
     this.currentPasswordField = page.getByLabel(UIReference.credentials.currentPasswordFieldLabel);
     this.newPasswordField = page.getByLabel(UIReference.credentials.newPasswordFieldLabel, { exact: true });
     this.confirmNewPasswordField = page.getByLabel(UIReference.credentials.newPasswordConfirmFieldLabel);
@@ -72,7 +74,9 @@ class AccountPage {
     this.accountCreationEmailField = page.getByLabel(UIReference.credentials.emailFieldLabel, { exact: true });
     this.accountCreationPasswordField = page.getByLabel(UIReference.credentials.passwordFieldLabel, { exact: true });
     this.accountCreationPasswordRepeatField = page.getByLabel(UIReference.credentials.passwordConfirmFieldLabel);
-    this.accountCreationConfirmButton = page.getByRole('button', { name: UIReference.accountCreation.createAccountButtonLabel });
+    //this.accountCreationConfirmButton = page.getByRole('button', { name: UIReference.accountCreation.createAccountButtonLabel });
+    const form = page.locator('#form-validate');
+    this.accountCreationConfirmButton = form.locator('button[type="submit"]');
 
     this.accountInformationField = page.locator(UIReference.accountDashboard.accountInformationFieldLocator).first();
 

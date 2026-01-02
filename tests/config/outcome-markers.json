@@ -55,7 +55,7 @@
     "firstProductName": "Aim Analog Watch"
   },
   "logout": {
-    "logoutConfirmationText": "You have signed out"
+    "logoutConfirmationText": "You are signed out"
   },
   "magentoAdmin" : {
     "configurationSavedText" : "You saved the configuration.",

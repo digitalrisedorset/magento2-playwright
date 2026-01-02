@@ -223,7 +223,7 @@
     "genericPriceSymbol": "$",
     "genericSaveButtonLabel": "Save",
     "genericSubmitButtonLabel": "Submit",
-    "headerLocator": "#header",
+    "headerLocator": "header",
     "loadingSpinnerLocator": "#container .spinner",
     "messageLocator": "#messages .messages div",
     "removeLabel": "Remove",

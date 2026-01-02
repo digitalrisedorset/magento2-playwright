@@ -27,10 +27,11 @@ test.describe('Account information actions', {annotation: {type: 'Account Dashbo
     await page.goto(slugs.account.accountOverviewSlug);
     await page.waitForLoadState();
 
-    await expect(async () => {
-        await expect(page.locator('span').filter({hasText: UIReference.address.addressBookTitle}),
-          `Heading "${UIReference.address.addressBookTitle}" is visible`).toBeVisible();
-    }).toPass();
+    await expect(
+      page.locator('.block-dashboard-addresses .block-title strong', {
+        hasText: UIReference.address.addressBookTitle,
+      })
+    ).toBeVisible();
   });
 
   /**
