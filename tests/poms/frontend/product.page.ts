@@ -143,8 +143,11 @@ class ProductPage {
 
     await this.page.goto(url);
 
-    this.simpleProductTitle = this.page.getByLabel('Product Info').getByText(product, {exact:true});
-    expect(await this.simpleProductTitle.innerText(), `Product title "${product}" is visible`).toEqual(product);
+    //this.simpleProductTitle = this.page.getByLabel('Product Info').getByText(product, {exact:true});
+    this.simpleProductTitle = this.page.getByRole('heading', {name: product, exact:true});
+    //expect(await this.simpleProductTitle.innerText(), `Product title "${product}" is visible`).toEqual(product);
+    expect(await this.simpleProductTitle.innerText()).toEqual(product);
+    await expect(this.simpleProductTitle.locator('span')).toBeVisible();
 
     if(quantity){
       // set quantity

@@ -76,9 +76,10 @@ test.describe('Checkout (login required)', () => {
     }
 
     // expect to see radio button to select existing address
-    let shippingRadioButton = page.locator(UIReference.checkout.shippingAddressRadioLocator).first();
-    await expect(shippingRadioButton, 'Radio button to select address should be visible').toBeVisible();
-
+    // let shippingRadioButton = page.locator(UIReference.checkout.shippingAddressRadioLocator).first();
+    // await expect(shippingRadioButton, 'Radio button to select address should be visible').toBeVisible();
+    const selectedAddress = page.locator('.shipping-address-item.selected-item');
+    await expect(selectedAddress, 'One shipping address should be selected').toBeVisible();
   });
 
 
