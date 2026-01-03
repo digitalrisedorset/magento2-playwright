@@ -119,7 +119,7 @@
     "cartQuantityLabel": "Qty",
     "discountInputFieldLabel": "Enter discount code",
     "showDiscountFormButtonLabel": "Apply Discount Code",
-    "updateItemButtonLabel": "Update item",
+    "updateItemButtonLabel": "Update",
     "updateShoppingCartButtonLabel": "Update Shopping Cart"
   },
   "cartPriceRulesPage": {
@@ -239,7 +239,7 @@
     "subCategoryItemText" : "Fitness Equipment",
     "categoryItemText" : "Gear",
     "loginButtonLabel" : "Sign In",
-    "miniCartLabel": "Toggle minicart",
+    "miniCartLabel": "My Cart",
     "myAccountButtonLabel": "My Account",
     "myAccountLogoutItem": "Sign Out",
     "myOrdersButtonLabel" : "My Orders",
@@ -247,10 +247,10 @@
     "wishListButtonLabel" : "My Wish List"
   },
   "miniCart": {
-    "cartDrawerLocator": "#cart-drawer-title",
-    "cartEmptyText": "Cart is empty",
+    "cartDrawerLocator": "#minicart-content-wrapper",
+    "cartEmptyText": "You have no items in your shopping cart.",
     "checkOutButtonLabel": "Checkout",
-    "editProductIconLabel": "Edit product",
+    "editProductIconLabel": "Edit item",
     "minicartButtonLocator": "#menu-cart-icon",
     "minicartAmountBubbleLocator": "#menu-cart-icon > span",
     "minicartPriceFieldClass": ".price-excluding-tax .minicart-price .price",
@@ -258,8 +258,8 @@
     "miniCartToggleLabelMultiItem": "items",
     "miniCartToggleLabelOneItem": "1 item",
     "miniCartToggleLabelPrefix": "Toggle minicart,",
-    "productQuantityFieldLabel": "Quantity",
-    "removeProductIconLabel": "Remove product",
+    "productQuantityFieldLabel": "Qty",
+    "removeProductIconLabel": "Remove item",
     "toCartLinkLabel": "View and Edit Cart"
   },
   "search": {

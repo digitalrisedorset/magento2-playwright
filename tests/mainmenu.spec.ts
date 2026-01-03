@@ -80,9 +80,7 @@ test.describe('Guest tests (not logged in)', () => {
   test('Open_the_minicart', { tag: ['@mainmenu', '@cold'] }, async ({page}) => {
     const mainMenu = new MainMenuPage(page);
     await page.goto(requireEnv('PLAYWRIGHT_BASE_URL'));
-    await mainMenu.mainMenuMiniCartButton.waitFor();
-
-    await mainMenu.openMiniCart();
+    await mainMenu.openMiniCartEmpty();
   });
 
   /**

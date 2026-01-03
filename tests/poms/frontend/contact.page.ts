@@ -13,9 +13,13 @@ class ContactPage {
 
   constructor(page: Page){
     this.page = page;
-    this.nameField = this.page.getByLabel(UIReference.credentials.nameFieldLabel);
-    this.emailField = this.page.getByPlaceholder(UIReference.credentials.emailFieldLabel, { exact: true });
-    this.messageField = this.page.locator(UIReference.contactPage.messageFieldSelector);
+    const form = page.locator('#contact-form');
+    //this.nameField = this.page.getByLabel(UIReference.credentials.nameFieldLabel);
+    this.nameField = form.locator('input[name="name"]');
+    //this.emailField = this.page.getByPlaceholder(UIReference.credentials.emailFieldLabel, { exact: true });
+    this.emailField = form.locator('input[name="email"]');
+    //this.messageField = this.page.locator(UIReference.contactPage.messageFieldSelector);
+    this.messageField = form.locator('textarea[name="comment"]');
     this.sendFormButton = this.page.getByRole('button', { name: UIReference.general.genericSubmitButtonLabel });
   }
 

@@ -27,7 +27,7 @@ test.describe('Minicart Actions', {annotation: {type: 'Minicart', description: '
     await page.goto(slugs.productPage.simpleProductSlug);
     await productPage.addSimpleProductToCart(UIReference.productPage.simpleProductTitle, slugs.productPage.simpleProductSlug);
     await mainMenu.openMiniCart();
-    await expect(page.getByText(outcomeMarker.miniCart.simpleProductInCartTitle)).toBeVisible();
+    await expect(page.getByText(outcomeMarker.miniCart.simpleProductInCartTitle).first()).toBeVisible();
   });
 
   /**
